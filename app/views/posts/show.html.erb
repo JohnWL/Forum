@@ -1,5 +1,9 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
+<h2><%= @post.replies.count %> Replies</h2>
+<%= render @post.replies %>
+<h3>Reply to thread:</h3>
+<%= render 'replies/form' %>
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "Delete", @post, method: :delete,
                              data: { confirm: "Are you sure?" } %>

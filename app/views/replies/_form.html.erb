@@ -1,0 +1,4 @@
+<%= simple_form_for([@post, @post.replies.build]) do |f| %>
+  <%= f.input :reply %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,5 @@
+<%= reply.reply %>
+<p>Reply by <%= reply.user.email %>
+<%= link_to "Edit Reply", edit_post_reply_path(reply.post, reply) %>
+<%= link_to "Delete Reply", [reply.post, reply], method: :delete,
+                            data: { confirm: "Are you sure?" } %></p>
