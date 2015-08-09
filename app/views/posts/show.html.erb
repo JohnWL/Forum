@@ -4,7 +4,7 @@
 <%= render @post.replies %>
 <h3>Reply to thread:</h3>
 <%= render 'replies/form' %>
-<%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Edit", edit_post_path(@post) %> |
 <%= link_to "Delete", @post, method: :delete,
-                             data: { confirm: "Are you sure?" } %>
+                             data: { confirm: "Are you sure?" } %> |
 <%= link_to "Home", root_path %>                             
