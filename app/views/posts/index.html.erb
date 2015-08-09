@@ -1,6 +1,4 @@
 <% @posts.each do |p| %>
   <h2><%= link_to p.title, p %></h2>
-  <p>Posted <%= time_ago_in_words(p.created_at) %> ago</p>
+  <p>Posted <%= time_ago_in_words(p.created_at) %> ago by <%= p.user.email %></p>
 <% end %>
-
-<%= link_to "Add Post", new_post_path %>
